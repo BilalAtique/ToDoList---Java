@@ -39,6 +39,14 @@ class Main {
     JPanel mainPanel = new JPanel(new BorderLayout());
     frame.add(mainPanel);
 
+    
+    JPanel buttonPanel = new JPanel();
+    buttonPanel.add(createTaskBtn);
+    buttonPanel.add(showTasksListBtn);
+
+    mainPanel.add(buttonPanel, BorderLayout.CENTER);
+
+
     frame.setVisible(true);
   }
 
