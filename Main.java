@@ -18,6 +18,15 @@ class Main {
     frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
     frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
+    JButton createTaskBtn = new JButton("Create Task");
+    createTaskBtn.addActionListener(
+      new ActionListener() {
+        public void actionPerformed(ActionEvent e) {
+          new TaskInput().takeTaskInputs();
+        }
+      }
+    );
+
     JPanel mainPanel = new JPanel(new BorderLayout());
     frame.add(mainPanel);
 
