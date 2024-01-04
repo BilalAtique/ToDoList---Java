@@ -27,6 +27,15 @@ class Main {
       }
     );
 
+    JButton showTasksListBtn = new JButton("Show Tasks");
+    showTasksListBtn.addActionListener(
+      new ActionListener() {
+        public void actionPerformed(ActionEvent e) {
+          showTasksList();
+        }
+      }
+    );
+
     JPanel mainPanel = new JPanel(new BorderLayout());
     frame.add(mainPanel);
 
