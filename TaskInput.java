@@ -47,4 +47,10 @@ public class TaskInput {
         frame.add(panel);
         frame.setVisible(true);
     }
+    private void addInputField(JPanel panel, String labelText, JTextField textField) {
+        JLabel label = new JLabel(labelText);
+        panel.add(label);
+
+        panel.add(textField);
+    }
 }
