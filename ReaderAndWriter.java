@@ -28,4 +28,15 @@ public class ReaderAndWriter {
             return fileContent;
         }
     }
+    public static ArrayList stringToList(String fileContent) {
+        ArrayList<Task> tasksList = new ArrayList<>();
+        String[] taskProperties;
+        String[] lines = fileContent.split("[\\r\\n]+");
+        for (int i = 0; i < lines.length; i++) {
+            taskProperties = lines[i].split(",");
+            Task task = new Task(taskProperties[0], taskProperties[1], taskProperties[2], taskProperties[3]);
+            tasksList.add(task);
+        }
+        return tasksList;
+    }
 }
