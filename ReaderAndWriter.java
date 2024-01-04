@@ -14,4 +14,18 @@ public class ReaderAndWriter {
             System.out.print(e);
         }
     }
+    public static String fileReader() {
+        String fileContent = "";
+        try {
+            FileReader reader = new FileReader("Tasks-List.csv");
+            int i;
+            while ((i = reader.read()) != -1)
+                fileContent += (char) i;
+            reader.close();
+        } catch (Exception e) {
+            System.out.println(e);
+        } finally {
+            return fileContent;
+        }
+    }
 }
